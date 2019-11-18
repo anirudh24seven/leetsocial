@@ -358,7 +358,8 @@ class UI extends React.PureComponent {
     }
 
     if (typeof window.Notification !== 'undefined' && Notification.permission === 'default') {
-      window.setTimeout(() => Notification.requestPermission(), 120 * 1000);
+      // Stop asking for browser notifications
+      // window.setTimeout(() => Notification.requestPermission(), 120 * 1000);
     }
 
     this.props.dispatch(expandHomeTimeline());
